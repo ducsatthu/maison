@@ -1,0 +1,48 @@
+<div class="order">
+    <form class="form-horizontal form-order">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="form-group">
+                    <label for="order" class="col-sm-6 control-label">Sắp xếp theo</label>
+                    <div class="col-sm-6">
+                        <select id="order" class="order form-control select-dark" onchange="ajaxFilter('order', $(this).val())">
+                            <option value="desc">Mới nhất</option>
+                            <option value="asc">Cũ nhất</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5 col-xs-8 ">
+                <div class="form-group">
+                    <label for="limit" class="col-sm-6 control-label paddinglr5">hiển thị</label>
+                    <div class="col-sm-3 paddinglr5">
+                        <select id="limit" class="form-control select-dark">
+                            <option>12</option>
+                            <option>24</option>
+                            <option>34</option>
+                            <option>Tất Cả</option>
+                        </select>
+                    </div>
+                    <span class="col-sm-3 control-label paddinglr5">Sản phẩm</span>
+                </div>
+            </div>
+            <div class="col-md-2 col-xs-4 paddinglr5">
+                <div class="circle">
+                    <a>
+                        <i class="fa fa-th-large">
+                        </i>
+                    </a>
+
+                </div>
+                <div class="circle">
+                    <a>
+                        <i class="fa fa-th-list">
+                        </i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+

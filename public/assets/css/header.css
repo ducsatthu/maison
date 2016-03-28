@@ -1,0 +1,96 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 26, 2016, 1:28:47 PM
+    Author     : tranxuanduc
+*/
+
+/*Left top*/
+.header-top{
+    height: 55px;
+    border-bottom: 1px #ccc solid;
+}
+.header-top .social,.header-top .account{
+    padding-top: 10px;
+}
+.header-top .social .circle,.circle{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background: #d8d8d8;
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;
+    vertical-align: middle;
+}
+.header-top .social .text{
+    display: inline;
+}
+.header-top .social .text a{
+    color: #8e8e8e;
+}
+.header-top .social .circle:hover{
+    background: #f6c566;
+}
+.circle:hover{
+    background: #f57d65;
+}
+.header-top .social .circle .fa,.circle .fa{
+   
+    color: #fff;
+}
+
+/*right top */
+.header-top .account{
+    float: right;
+    padding-top:20px;
+}
+.header-top .account .dropdown-toggle{
+    color: #8e8e8e;
+}
+.header-top .account .btn-group.open .dropdown-toggle{
+    box-shadow: none;
+    color: #000;
+}
+.header-top .account .btn-group{
+    padding-right: 15px;
+}
+
+/* left middle */
+.header-middle{
+    padding-bottom: 5px;
+    border-bottom: 1px #ccc solid;
+}
+.header-middle .main-search,.header-middle .order{
+    padding-top : 25px;
+    float:right;
+    display: inline-block;
+}
+.header-middle .main-search button{
+    text-transform: uppercase;
+    font-weight: bold;
+    float: right;
+
+}
+.header-middle .main-search input{
+    border: 1px #83cadc solid;
+    font-family: 'sfugill','Roboto', sans-serif;
+    float: right;
+}
+.header-middle .order{
+    display: inline-block;
+    float:left;
+}
+.header-middle .order span.input-group-btn{
+    float:left;
+}
+
+
+@media(min-width:1366px){
+    .header-middle .main-search input{
+        max-width: 325px;
+    }
+}

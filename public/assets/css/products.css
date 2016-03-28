@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 26, 2016, 8:04:33 PM
+    Author     : tranxuanduc
+*/
+.list-products{
+    margin-top: 50px;
+}
+
+.products-large .product{
+    border: 1px #e5e5e5 solid;
+    padding: 20px;
+    margin-bottom: 75px;
+}
+.products-large .product .btn{
+    border-right: 1px #fff solid;
+}
+.products-large .product .btn:last-of-type{
+    border-right: 0;
+}
+.products-large .product .info{
+    margin-top: 20px;
+    font-size: 8pt;
+}
+.products-large .product .star,.products-large .product .hits{
+    display: inline-block;
+}
+.products-large .product .hits a{
+    color: #878787;
+}
+.decor{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background: url(../images/decor.png) no-repeat center center;
+    height:4px;
+    width: 100%;
+}
+
+.products-large .product article h4{
+    text-align: center;
+}
+.products-large .product article .price{
+    margin-top: 20px;
+    display: inline-block;
+}
+.products-large .product article .price strike{
+    font-size: 7pt;
+}
+.products-large .product article .price span{
+    padding-left: 3px;
+    font-size: 9pt;
+}
+
+.products-large .product article .price span.sale{
+    padding: 0;
+    color: #addae9;
+    font-size: 6pt;
+    padding:2px 7px;
+    border: 1px #addae9 solid;
+}
+.products-large .product article .checkout{
+    margin-top: 25px;
+}
+
+.products-large .product:hover{
+    border: 5px #313131 solid;
+    margin-bottom: 0;
+}

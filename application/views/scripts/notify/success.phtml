@@ -1,0 +1,28 @@
+<div id="successUpdate" class="loadding modal fade bs-example-modal-sm" style="z-index: 99999999;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <img alt="Loadding" src="/public/img/icons/png/Retina-Ready.png" height="70px" />
+                Thao Tác Thành Công
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <span><i class="fa fa-chevron-left"></i></span>
+                    <a href="javascript:history.go(-2)">Trở Về</a>
+
+                    <span><i class="fa fa-check"></i></span>
+                    <a href="/" class="signUp">Trang Chủ</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+<div>
+    <span><i class="fa fa-chevron-left fa-2x"><a href="javascript:history.go(-2)">Trở Về</a></i></span>
+</div>
+<script>
+    $("#loadding").modal('hide');
+    $("#successUpdate").modal('show');
+</script>
+<?php
+header("Refresh: 1;");

@@ -1,0 +1,105 @@
+<div class="sidebar">
+    <div class="price-slide">
+        <span class="headding">Tìm theo giá</span>
+        <div id="slider-range" class="price-range"></div>
+        <div class="price">
+            <input type="text" readonly class="min" id="min" name="minprice"/>
+            <input type="text" readonly class="max" id="max" name="maxprice" >
+        </div>
+        <button class="btn btn-dark" type="submit" onclick="ajaxFilter('minmax', jQuery('#min').val() + ',' + jQuery('#max').val())">Lọc giá</button>
+    </div>
+</div>
+<div class="sidebar">
+    <div class="list">
+        <span class="headding">Danh mục</span>
+        <ul>
+            <?php foreach ($this->categories() as $key => $value): ?>
+                <li><a style=" cursor:progress;" onclick="ajaxFilter('categories',<?php echo $key ?>)"><?php echo $value; ?></a></li>
+            <?php endforeach; ?>
+
+        </ul>
+    </div>
+</div>
+<div class="sidebar">
+    <div class="list">
+        <span class="headding">Tìm theo màu </span>
+
+        <ul>
+            <?php foreach ($this->colors() as $key => $value): ?>
+                <li><a style=" cursor:progress;"  onclick="ajaxFilter('colors',<?php echo $key ?>)"><?php echo $value; ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</div>
+<div class="sidebar">
+    <div class="list">
+        <span class="headding">Tìm theo size</span>
+
+        <ul>
+            <?php foreach ($this->size() as $key => $value): ?>
+                <li><a style=" cursor:progress;"   onclick="ajaxFilter('size',<?php echo $key ?>)"><?php echo $value; ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</div>
+
+<div class="sidebar">
+    <div class="compare">
+        <h3>So sánh sản phẩm </h3>
+        <hr>
+        <p><em>Không có sản phẩm nào được chọn</em> </p>
+    </div>
+
+</div>
+
+<div class="sidebar">
+    <div class="product-list">
+        <h3>
+            <span class="heading-hr">
+                SALE
+            </span>
+        </h3>
+
+        <?php $i = 0 ?>
+        <?php foreach ($this->list as $item) : ?>
+            <?php if ($item['price_old']): ?>
+                <div class="product">
+                    <div class="row">
+                        <div class="col-xs-5">
+                            <a href="/product/view/id/<?php echo $item['id'];?>" alt="link">
+                                <img alt="sale" src="<?php echo $item['image']; ?>" class="img-responsive"/>
+                            </a>
+                        </div>
+                        <div class="col-xs-7">
+                            <a href="/product/view/id/<?php echo $item['id'];?>" alt="link"><h5><?php echo $item['name']; ?></h5></a>
+
+                            <div class="price">
+                                <strike><?php echo new Zend_Currency(array("value" => $item['price_old'], 'precision' => 0, 'symbol' => 'VNĐ', 'format' => 'vi')); ?></strike>
+                                <span><?php echo new Zend_Currency(array("value" => $item['price'], 'precision' => 0, 'symbol' => 'VNĐ', 'format' => 'vi')); ?></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <?php $i++;
+                if ($i == 3)
+                    break;
+                ?>
+    <?php endif; ?>
+<?php endforeach; ?>
+    </div>
+</div>
+
+<div class="sidebar">
+    <div class="tags">
+        <h3>Tags</h3>
+        <hr>
+        <div class="tags-list">
+            <button class="btn btn-default">Women</button>
+            <button class="btn btn-default">Man</button>
+            <button class="btn btn-default">Bags</button>
+            <button class="btn btn-default">Suits</button>
+            <button class="btn btn-default">Shopping</button>
+            <button class="btn btn-default">Suits</button>
+        </div>
+    </div>
+</div>

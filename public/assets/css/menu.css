@@ -1,0 +1,86 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 26, 2016, 2:54:30 PM
+    Author     : tranxuanduc
+*/
+
+.nav-menu.navbar-default{
+    padding-top: 10px;
+    background-color: transparent;
+    border-top: none;
+    border-bottom: 7px #313131 solid;
+    margin-bottom: 0px;
+}
+.nav-menu.navbar-default ul li a{
+    font-family: 'sfugill', sans-serif;
+    font-weight: bold;
+    font-size: 12pt;
+    text-transform: uppercase;
+    padding-left: 25px;
+    padding-right: 25px;
+    color: #000;
+}
+.nav-menu.navbar-default ul li a sup{
+    top: -2em;
+    /*left: -2em;*/
+    color: #fff;
+    font-size: 7pt;
+    padding: 2px 5px 2px 5px;
+    margin-right: -5px;
+    margin-left: -20px;
+
+}
+.nav-menu.navbar-default ul li{
+    border-right: 1px #ccc solid;
+    margin-bottom: 5px;
+    /*min-width: 120px;*/
+}
+.nav-menu.navbar-default ul li:first-of-type{
+    border-left: 1px #ccc solid;
+}
+.nav-menu.navbar-default ul li.active a {
+    background-color: #fff;
+    color: #000;
+}
+.nav-menu.navbar-default ul li a:hover,.nav-menu.navbar-default ul li:active a:hover  {
+    background-color: #fff !important;
+    color: #313131 !important;
+}
+
+.nav-menu.navbar-default .navbar-collapse{
+    padding:0;
+}
+
+/*breadcrumb*/
+.crumb{
+    padding-top: 7px;
+}
+.crumb span{
+    padding: 10px 5px;
+    background-color: #313131;
+    font-size: 11px;
+    color: #fff;
+    margin-left: -5px;
+}
+.crumb span:first-of-type{
+    padding-left: 10px;
+    margin-left: 0;
+}
+.crumb span:last-of-type{
+    padding-right: 10px;
+}
+.crumb span a{
+    color: #fff;
+}
+.crumb span a:hover{
+    color: #eb3d3c;
+}
+.crumb > span+span:before{
+    font: normal normal normal 14px/1 FontAwesome;
+    content: "\f105 ";
+    padding-right: 15px;
+}

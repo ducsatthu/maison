@@ -1,0 +1,100 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 26, 2016, 1:10:43 PM
+    Author     : tranxuanduc
+*/
+
+@font-face{
+    font-family: "sfugill";
+    font-weight: normal;
+    src: url(../fonts/sfugillsansregular-ttf.ttf);
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'sfugill','Roboto', sans-serif;
+    color:#080808;
+}
+
+a,a:hover,a:active{
+    text-decoration: none;
+}
+
+.none-padding{
+    padding:0px;
+}
+.paddinglr5{
+    padding:0px 5px;
+}
+
+/*overwrite bootstrap*/
+.btn{
+    border-radius: 0;
+}
+.btn-primary{
+    background-color: #83cadc;
+    border-color: #83cadc;
+}
+.btn-primary:hover {
+    background-color: #83c0d0;
+    border-color: #83c0d0;
+}
+.border-primary{
+    border-color: #83c0d0;
+}
+.btn-gray{
+    background-color: #cccccc;
+    border-color: #cccccc;
+    color:#fff;
+}
+.btn-dark{
+    background-color: #888888;
+    border-color: #888888;
+    color:#fff;
+}
+.btn-darkness{
+    background-color: #313131;
+    border-color: #313131;
+    color:#fff;
+}
+.btn-dark:hover,.btn-darkness:hover,.btn-gray:hover{
+    color:#fff;
+    background: #888888;
+}
+.btn-default:hover {
+    color: #fff;
+    background-color: #313131;
+    border-color: #313131;
+}
+.btn-upper{
+    text-transform: uppercase;
+}
+.btn-50{
+    width: 50%;
+}
+.btn-25{
+    width: 25%;
+}
+/*color*/
+.color-primary{
+    color: #83c0d0;
+}
+.color-red{
+    color: #eb3f3b;
+}
+
+.bgcolor-red{
+    background-color: #eb3f3b;
+}
+.bgcolor-yellow{
+    background-color: #f9bc2e; 
+}

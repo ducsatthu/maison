@@ -1,0 +1,51 @@
+<?php echo $this->doctype(); ?>
+<html>
+    <head>
+        <?php echo $this->headMeta(); ?>
+        <?php echo $this->headTitle(); ?>
+        <?php echo $this->headLink(); ?>
+        <?php echo $this->headScript() ?>  
+    </head>
+    <body>
+        <?php echo $this->render('admin/headerAdminLogo.phtml') ?>  
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <!--menu trái -->
+                        <?php echo $this->render('admin/AdminMenu.phtml'); ?>  
+                    </div>
+                    <div class="col-sm-9">
+                        <!-- vùng hiển thị thao tác -->
+                        <div class="panel panel-info">
+                            <div class="panel-body">
+                                <!--main position -->
+                                <?php echo $this->layout()->content; ?>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="loadding" class="loadding modal fade bs-example-modal-sm" style="z-index: 99999999;">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <img alt="Loadding" src="/public/img/loadding/loading16.gif" width="70px" height="70px" />
+                        Vui Lòng Chờ Trong Giây Lát
+                    </div>
+                </div>
+            </div> 
+        </div>
+
+        <script>
+            $("#OK").click(function () {
+                $("#loadding").modal('show');
+            });
+            $('table').dataTable();
+            $('select').chosen();
+        </script>
+    </body>
+</html>

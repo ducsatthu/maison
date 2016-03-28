@@ -1,0 +1,65 @@
+<div class="products-large" id="products">
+    <div class="row">
+        <?php if ($this->list): ?>
+            <?php foreach ($this->list as $item) : ?>
+                <div class="col-md-4">
+                    <div class="product">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-6 col-xs-12">
+                                <a href="/product/view/id/<?php echo $item['id']; ?>" alt="link">
+                                    <img src="<?php echo $item['image']; ?>" class="img-responsive"/>
+                                </a>
+                            </div>
+                            <div class="col-md-12 col-sm-6 col-xs-12">
+                                <div class="action">
+                                    <button class="btn btn-dark btn-upper btn-sm btn-50"><i class="fa fa-search"></i>  Xem nhanh</button><button class="btn btn-gray btn-upper btn-sm btn-25"><i class="fa fa-heart"></i></button><button class="btn btn-gray btn-upper btn-sm btn-25"><i class="fa fa-toggle-on"></i></button>
+                                </div>
+
+                                <div class="info">
+                                    <div class="star" id="star">
+                                        <div class="stars-default"><input type=hidden name="rating"/></div>
+                                    </div>
+                                    <div class="hits">
+                                        <span>3 Lượt xem</span>
+                                        <span> | </span>
+                                        <a href="#">Thêm vào giỏ hàng </a>
+                                    </div>
+                                    <div class="decor"></div>
+
+                                    <article>
+                                        <a href="/product/view/id/<?php echo $item['id']; ?>" alt="link">
+                                            <h4><?php echo $item['name']; ?></h4>
+                                        </a>
+                                        <div class="price">
+                                            <strike>
+                                                <?php
+                                                if ($item['price_old']):
+                                                    ?>
+                                                    <?php echo new Zend_Currency(array("value" => $item['price_old'], 'precision' => 0, 'symbol' => 'VNĐ', 'format' => 'vi')); ?>
+                                                <?php endif; ?>
+                                            </strike>
+                                            <span><?php echo new Zend_Currency(array("value" => $item['price'], 'precision' => 0, 'symbol' => 'VNĐ', 'format' => 'vi')); ?></span>
+                                            <span class="sale">-10%</span>
+                                        </div>
+
+                                        <p align="center" class="checkout hidden">
+                                            <a class="btn btn-darkness text-center btn-upper">
+                                                Thanh toán
+                                            </a> 
+                                        </p>
+
+                                    </article>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            <?php endforeach; ?>
+        <?php endif; ?>
+
+    </div>
+</div>

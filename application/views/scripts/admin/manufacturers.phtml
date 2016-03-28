@@ -1,0 +1,57 @@
+<div class = "features_items"><!--features_items-->
+    <h2 class = "title text-center">Các nhà sản xuất <span><a href="/admin/manufacturers/edit/add" class="btn btn-xs btn-info">Thêm mới</a></span></h2>
+    <div class = "row">
+        <div class = "col-lg-12">
+            <?php
+            if (isset($this->form)) {
+                echo $this->form;
+                ?>
+                <a href="/admin/manufacturers" class="btn btn-default">Trở lại xem danh sách</a>
+                <?php
+            } else {
+                ?>
+                <table class="table table-hover table-responsive table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Tên nhà sản xuất</th>
+                            <th>Địa chỉ</th>
+                            <th>Thao Tác</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $i = 0;
+                        foreach ($this->list as $key => $value) {
+                            ?>
+                            <tr>
+                                <td><?php echo $value['id']; ?></td>
+                                <td><?php echo $value['name']; ?></td>
+                                <td><?php echo $value['address']; ?></td>
+                                <td><a type="button" href="/admin/manufacturers/edit/<?php echo $value['id']; ?>" class="btn btn-info btn-xs" id="edit-categories-<?php echo $value['id']; ?>">Sửa</a>&nbsp;<a type="button" href="/admin/manufacturers/delete/<?php echo $value['id']; ?>" class="btn btn-danger btn-xs" id="edit-categories-<?php echo $value['id']; ?>">Xoá</a></td>
+                            </tr>
+                        <?php }
+                        ?>
+                    </tbody>
+                </table>
+                <?php
+            }
+            ?>
+        </div>
+
+    </div>
+
+</div>
+<?php
+if ($this->item) {
+    ?>
+    <script>
+        jQuery(document).ready(function () {
+            jQuery('input[name="id"]').val('<?php echo $this->item['id']; ?>');
+            jQuery('input[name="name"]').val('<?php echo $this->item['name']; ?>');
+            jQuery('input[name="address"]').val('<?php echo $this->item['address']; ?>')
+        });
+    </script>
+    <?php
+}
+?>

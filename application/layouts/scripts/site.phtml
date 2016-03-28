@@ -1,0 +1,19 @@
+<?php echo $this->render('site/header.phtml'); ?>
+
+<section class="content-main container">
+    <div class="row">
+        <div class="col-md-3">
+            <?php echo $this->render('site/widget.phtml'); ?>
+        </div>
+        <div class="col-md-9">
+            <?php echo $this->render('site/filter.phtml'); ?>
+            <div class="list-products">
+                <?php echo $this->layout()->content; ?>
+
+            </div>
+
+            <?php echo $this->render('site/filter.phtml'); ?>
+        </div>
+</section>
+<?php
+echo $this->render('site/footer.phtml');
